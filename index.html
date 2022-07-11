@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE-Edge">
+        <title>Page Structure</title>
+        <!-- 브라우저 탭 아이콘 추가하기 -->
+        <link rel = "icon" href = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcon.png">
+        <script src = "src/js/index.js"></script>
+    </head>
+    <body>
+        <link rel = "stylesheet" href = "src/css/style.css">
+        <header id = "PageTop">
+            <!-- <p>여기는 헤더 영역입니다.</p> -->
+        <div id = "NaviBar">
+            <nav>
+                <ul>
+                    <li id = "nav00"><a href ="https://about.google.com/" target = "_self">Google 정보</a></li>
+                    <li id = "nav01"><a href = "https://store.google.com/" target = "_self">스토어</a></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </nav>
+        </div>
+        <div class = "dropdown">
+                    <button id = "MenuBtn" class = "dropbtn" onclick = "DropClk()">
+                        <img id = "menuicon" src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleMenu.png">
+                    </button>
+                    <div class = "dropdown-content" id = "dropcont">
+                        <!-- 37개 메뉴, 36개 아이콘 / 1개 텍스트 버튼 -->
+                        <div class = "column" id = "clmn1">
+                            <a id = "c1" href = "#">
+                                <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/G00.png">컨텐츠1 
+                            </a>
+                            <a id = "c2" href = "#">
+                                <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/G01.png">컨텐츠2
+                            </a>
+                            <a id = "c3" href = "#">
+                                <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/G02.png">컨텐츠3
+                            </a>
+                        </div>
+                        <div class = "column" id = "clmn2">
+                            <a id = "c4" href = "#">
+                                <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/G03.png">컨텐츠4
+                            </a>
+                            <a id = "c5" href = "#">
+                                <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/G04.png">컨텐츠5
+                            </a>
+                            <a id = "c6" href = "#">
+                                <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/G05.png">컨텐츠6
+                            </a>
+                        </div>
+                        <div class = "column" id = "clmn3">
+                            <a id = "c7" href = "#">
+                                <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/G06.png">컨텐츠7
+                            </a>
+                            <a id = "c8" href = "#">
+                                <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/G07.png">컨텐츠8
+                            </a>
+                            <a id = "c9" href = "#">
+                                <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/G08.png">컨텐츠9
+                            </a>
+                        </div>
+                        <div class = "column" id = "clmn4">
+                            <a id = "c10" href = "#">
+                                <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/G09.png">컨텐츠10
+                            </a>
+                            <a id = "c11" href = "#">
+                                <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/G10.png">컨텐츠11
+                            </a>
+                            <a id = "c12" href = "#">
+                                <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/G11.png">컨텐츠12
+                            </a>
+                        </div>
+                        <div class = "column" id = "clmn5">
+                            <a id = "c13" href = "#">
+                                <img src = "#">더보기
+                            </a>
+                        </div>
+                    </div>
+        </div>
+        <div>
+                <button id = "ProfileBtn">
+                <img id = "Profile" src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/profile_icon01.png">
+                </button>
+        </div>
+        </header>
+        <main id = "PageMiddle">
+             <!-- <p>여기는 본문 영역입니다.</p> -->
+             <div>
+                <img id = "PageLogo" src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleLogo.png">
+             </div>
+             <div class = "search-container">
+                <button id = "SearchBar">
+                <img id = "SearchIcon" src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleSearch.png">
+                <input id = "SearchTField" type = "text">    
+                </button>
+             </div>
+        </main>
+        <footer id = "PageEnd">
+            <!-- <p>여기는 하단 푸터 영역입니다.</p> -->
+        </footer>
+    </body>
+</html>
