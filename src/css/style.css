@@ -11,7 +11,6 @@
             {
             /* This places the dropdown contents inside the center of dropdown menu when hovering the mouse cursor on it. */
                 display: inline-block;
-              
             }
              /* Image size is different with button. It's sperated.*/
              #menuicon 
@@ -19,39 +18,79 @@
                 position: absolute;
                 height: 30px;
                 width: 30px;
-                left: 2.5px;
-                top: 3px;
+                left: 4px;
+                top: 4px;
              }
             .dropbtn
             {
                 position: absolute;
-                right: 71px;
+                right: 75px;
                 top: 18px;
                 background-color: #202124;
                 border: none;
-                border-radius: 17.5px;
+                border-radius: 30px;
                 cursor: pointer;  
-                height: 35px;
-                width: 35px; 
+                height: 40px;
+                width: 40px; 
             }
-            .dropdown-content
+            a > img
+            {
+                height: 35px;
+                width: 35px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            .column /* dropdown contents */
+            {
+                display:grid;
+                grid-template-columns: repeat(3, 95px);
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding: 5px;
+               
+            }
+            .dropdown-content /* dropdown box */
             {
                position: absolute;
                display: none;
                background-color: #2d2e30;
                z-index: 1;
                min-width: 50px;
-               right: 50px;
-               top: 50px;
+               right: 15px; /* Side location of dropdown menu */
+               top: 65px;
+               border-radius: 1.8%;
+               height: 300px;
+               width: 310px;
+               overflow: scroll; /* 메뉴 크기 밖의 아이템을 스크롤 가능하게 만듬*/
+               overflow-x: hidden; 
+               /* x축, y축 스크롤바 표시/비표시 */
             }
+            /* 드롭다운 메뉴 스크롤 스타일 */
+            .dropdown-content::-webkit-scrollbar
+            {
+                background-color: transparent;
+                width: 9px;
+                
+            }
+            .dropdown-content::-webkit-scrollbar-thumb
+            {
+                background-color: #5f6368;
+                border-radius: 8px;
+            }
+            .dropdown-content::-webkit-scrollbar-track
+            {
+                background-color: transparent;
+                
+            }
+            .dropdown-content::-webkit-scrollbar-corner
+            {
+                background-color: transparent;
+            }
+            /* 드롭다운 메뉴 스크롤 스타일 */
             .show
             {
                 display: block;
-            }
-            a > img
-            {
-                height: 35px;
-                width: 35px;
             }
             .dropdown-content a
             {
@@ -115,9 +154,14 @@
             {
                 background-color: #313134;
             }
+            #dropdown-etc:hover
+            {
+                background-color: #3c4043;
+            }
             .dropdown-content > .column > a:hover
             {
                 background-color: #28292c;
+                border-radius: 10%;
             }
             #PageLogo
             {
@@ -139,6 +183,28 @@
                 border-style: double;
                 border-color: #5f6368;
                 border-radius: 25px;
+            }
+            #searchBtn
+            {
+                position:absolute;
+                left: 43%;
+                right: 75%;
+                top: 49%;
+                widtH: 110px;
+                height: 32.5px;
+                border-radius: 5px;
+                background-color: #303134;
+                color: white;
+            }
+            #searchBtn:not(:hover)
+            {
+                border-style: none;
+            }
+            #searchBtn:hover
+            {
+                border-style: double;
+                border-width: 0.01em;
+                border-color: #5f6368;
             }
             #SearchTField
             {
@@ -179,11 +245,21 @@
             }
             #dropdown-etc
             {
-                font-size: 2.2px;
-                color: #528ef7;
-                border-radius: 25%;
+                font-size: 0.9em;
+                color: #7eb4e5;
+                text-decoration: none;
                 text-align: center;
+                border: 0.05px solid #5f6368;
+                white-space: nowrap;
+                position: relative;
+                line-height: 2.25em;
+                width: 65%;
+                border-radius: 4%;
+                margin-left: 18%;
+                margin-right: 25%;
+                margin-top: 13%;
             }
+           
            
            
            
