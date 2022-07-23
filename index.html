@@ -30,91 +30,111 @@
                     <div class = "dropdown-content" id = "dropcont">
                         <!-- 37개 메뉴, 36개 아이콘 / 1개 텍스트 버튼 -->
                         <div class = "column" id = "clmn1">
-                            <a id = "c0" href = "#">
+                            <a id = "c0" href = "https://myaccount.google.com/">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/GoogleIcon_Profile.png">
+                                <br>
                                 Google 계정
                             </a>
-                            <a id = "c1" href = "#">
+                            <a id = "c1" href = "https://www.google.co.kr/webhp?authuser=0">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/GoogleSearch.png">
+                                <br>
                                 검색
                             </a>
-                            <a id = "c2" href = "#">
+                            <a id = "c2" href = "https://business.google.com/?gmbsrc=ww-ww-ot-gs-z-gmb-l-z-h~z-ogb-u&authuser=0">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/GoogleBusiness.png">
+                                <br>
                                 비즈니스
                             </a>                           
                         </div>
                         <div class = "column" id = "clmn2">
-                            <a id = "c3" href = "#">
+                            <a id = "c3" href = "https://maps.google.com">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/GoogleMap.png">
+                                <br>
                                 지도
                             </a>
-                            <a id = "c4" href = "#">
+                            <a id = "c4" href = "https://youtube.com">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/Youtube.png">
+                                <br>
                                 Youtube
                             </a>
                             <a id = "c5" href = "#">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/Play.png">
+                                <br>
                                 Play
                             </a>                         
                         </div>
                         <div class = "column" id = "clmn3">
                             <a id = "c6" href = "#">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/News.png">
+                                <br>
                                 뉴스
                             </a>
                             <a id = "c7" href = "#">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/Gmail.png">
+                                <br>
                                 Gmail
                             </a>
                             <a id = "c8" href = "#">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/Meet.png">
+                                <br>
                                 Meet
                             </a>                  
                         </div>
                         <div class = "column" id = "clmn4">
                             <a id = "c9" href = "#">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/Chat.png">
+                                <br>
                                 채팅
                             </a>
                             <a id = "c10" href = "#">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/Contacts.png">
+                                <br>
                                 주소록
                             </a>
                             <a id = "c11" href = "#">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/Drive.png">
+                                <br>
                                 드라이브
                             </a>                           
                         </div>
                         <div class = "column" id = "clmn5">
                             <a id = "c12" href = "#">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/Calender.png">
+                                <br>
                                 캘린더
                             </a>
                             <a id = "c13" href = "#">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/Translate.png">
+                                <br>
                                 번역
                             </a>
                             <a id = "c14" href = "#">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/Picture.png">
+                                <br>
                                 사진
                             </a>
+                        </div>
+                        <div class = "column" id = "clmn6">
                             <a id = "c15" href = "#">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/Duo.png">
+                                <br>
                                 Duo
                             </a>
                             <a id = "c16" href = "#">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/Chrome.png">
+                                <br>
                                 Chrome
                             </a>
                             <a id = "c17" href = "#">
                                 <img src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleIcons/Shopping.png">
+                                <br>
                                 쇼핑
                             </a>
-                            <br>
-                            <a id = "dropdown-etc" href = "#">
+                        </div>
+                            <a id = "dropdown-etc" href = "https://www.google.co.kr/intl/ko/about/products">
                                 기타 Google 앱 및 제품
                             </a>
-                        </div>
+                            <br>
                     </div>
         </div>
         <div>
@@ -131,7 +151,10 @@
              <div class = "search-container">
                 <button id = "SearchBar">
                 <img id = "SearchIcon" src = "https://raw.githubusercontent.com/nrdydoggo/Resources/main/GoogleSearch.png">
-                <input id = "SearchTField" type = "text">    
+                <form action = "https://www.google.com/search" method = "GET">
+                    <input id = "SearchTField" type = "text" name = "query" value = ""> 
+                    <button type = "submit" id = "searchBtn">Google 검색</button>   
+                </form>
                 </button>
              </div>
         </main>
