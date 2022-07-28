@@ -1,0 +1,789 @@
+
+    
+           html
+           {
+            -ms-content-zooming: none;
+            -ms-content-action: pan-x pan-y;
+            overflow-x: hidden;
+           }
+           body
+            {
+                background-color: #202124;
+            }
+            img, a, a:any-link, div 
+            {
+                -webkit-user-drag: none;
+                -webkit-user-select: none;
+                user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none; 
+                background-repeat: no-repeat;
+            }
+            li
+            {
+                list-style: none;
+            }
+            #ProfileIMG
+            {
+                position: absolute;
+                height: 31.5px;
+                width: 31.5px;
+                border-radius: 15.75px;
+                right: 3.36px;
+                top: 3.5px;
+            }
+            #ProfileBtn
+            {
+                position: absolute;
+                height: 40px;
+                width: 40px;
+                border-radius: 20px;
+                right: 15.5px;
+                top: 11px;
+                cursor: pointer;
+                background-color: #202124;
+                border: none;
+                border-style: none;
+            }
+            #ProfileBtn:hover, .dropbtn:hover
+            {
+                background-color: #313134;
+            }
+            .ProfileContents /* Menu window */
+            {
+                position: absolute;
+                display: none;
+                background-color: #2d2e30;
+                right: 15px; /* Side location of dropdown menu */
+                top: 60px;
+                border-radius: 2%;
+                height: 764px;
+                width: 348px; 
+                z-index: 1;
+                min-width: 50px;
+                overflow: hidden;
+            }
+            .PColumn
+            {
+                display: contents;
+                grid-template-columns: repeat(1, 95px);
+            }
+            .PColumn > a > img,
+            .PColumn > img
+            {
+                height: 100px;
+                width: 100px;
+            }
+            #ProfileMenuIcon
+            {
+                position: absolute;
+                top: 18px;
+                left: 131px;
+                height: 80px;
+                width: 80px;
+                border: none;
+                border-radius: 80%;
+                box-shadow: none;
+            }
+            #ChangeUserIcon
+            {
+                position: absolute;
+                background-color: transparent;
+                border: none;
+                height: 22px;
+                width: 22px;
+                cursor: pointer;
+                top: 40px;
+                left: 97px;
+            }
+            #ChangeUserIcon > img
+            {
+                position: absolute;
+                background-color: transparent;
+                border: none;
+                height: 22px;
+                width: 22px;
+                top: 40px;
+                left: 97px;
+            }
+            #ProfileName
+            {
+                position: absolute;
+                font-weight: bold;
+                height: 60px;
+                width: 220px;
+                top: 95px;
+                left: 62px;
+                text-align: center;
+                font-weight: bold;
+                color: white;
+            }
+            #ProfileE-Mail
+            {
+                position: absolute;
+                color: white;
+                left: 68px;
+                top: 120px;
+                font-size: 0.95em;
+                background-color: transparent;
+            }
+            #ManageAccount
+            {
+                position: absolute;
+                height: 35px;
+                width: 170px;
+                left: 85px;
+                top: 190px;
+                border-radius: 35px;
+            }
+            #AddAnotherAccount
+            {
+                position: absolute;
+                left: 0px;
+                top: 597px;
+                height: 47px;
+                width: 347px;     
+            }
+            #Logout
+            {
+                position: absolute;
+                left: 98px;
+                top: 660px;
+                height: 38px;
+                width: 155px;
+            }
+            #lineA
+            {
+                position:absolute;
+                border-style: 1px groove gray;
+                border-color: rgba(160, 160, 160, 0.637);
+                width: 348px;
+                top: 229px;
+            }
+            #lineB
+            {
+                position:absolute;
+                border-style: 1px groove gray;
+                border-color: rgba(160, 160, 160, 0.637);
+                width: 348px;
+                top: 637px;
+            }
+            #lineC
+            {
+                position:absolute;
+                border-style: 1px groove gray;
+                border-color: rgba(160, 160, 160, 0.637);
+                width: 348px;
+                bottom: 43px;
+            }
+            #PrivateInfo
+            {
+                position: absolute;
+                bottom: 20px;
+                left: 40px;
+                background-color: transparent;
+                color: white;
+                border: none;
+                border-radius: 5%;
+                height: 27px;
+                width: 122px;
+                cursor: pointer;
+            }
+            #AndButton
+            {
+                position: absolute;
+                bottom: 3px;
+                left: 135px;
+                height: 14px;
+                width: 14px;
+            }
+            #ServicePolicy
+            {
+                cursor: pointer;
+                position: absolute;
+                bottom: 20px;
+                left: 200px;
+                background-color: transparent;
+                color: white;
+                border: none;
+                border-radius: 5%;
+                height: 27px;
+                width: 86px;
+            }
+            .ProfileMenuImages:hover
+            {
+                background-color: #343638;
+            }
+            .PColumn:hover
+            {
+                background-color: #343638;
+            }
+            .PColumn, .PColumn > a > img,
+            .PColumn > img 
+            {
+                -webkit-user-drag: none;
+                -webkit-user-select: none;
+                user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none; 
+            }
+            #PrivateInfo:hover,
+            #AndButton:hover,
+            #ServicePolicy:hover
+            {
+                background-color: #404040;
+                border-radius: 5%;
+            }
+            .dropdown
+            {
+            /* This places the dropdown contents inside the center of dropdown menu when hovering the mouse cursor on it. */
+                display: inline-block;
+            }
+             /* Image size is different with button. It's sperated.*/
+            .column > a > img
+            {
+                height: 35px;
+                width: 35px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                -webkit-user-drag: none;
+                -webkit-user-select: none;
+                user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none; 
+            }
+            .column /* dropdown contents */
+            {
+                display:grid;
+                grid-template-columns: repeat(3, 95px);
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding: 5px;
+                -webkit-user-drag: none;
+                -webkit-user-select: none;
+                user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none; 
+            }
+            .dropdown-content /* dropdown box */
+            {
+               position: absolute;
+               display: none;
+               background-color: #2d2e30;
+               z-index: 1;
+               min-width: 65px;
+               right: 15px; /* Side location of dropdown menu */
+               top: 65px;
+               border-radius: 1.8%;
+               height: 300px;
+               width: 310px;
+               overflow: scroll; /* 메뉴 크기 밖의 아이템을 스크롤 가능하게 만듬*/
+               overflow-x: hidden; 
+               /* x축, y축 스크롤바 표시/비표시 */
+            }
+            /* 드롭다운 메뉴 스크롤 스타일 */
+            .dropdown-content::-webkit-scrollbar
+            {
+                background-color: transparent;
+                width: 9px;
+                
+            }
+            .dropdown-content::-webkit-scrollbar-thumb
+            {
+                background-color: #5f6368;
+                border-radius: 8px;
+            }
+            .dropdown-content::-webkit-scrollbar-track
+            {
+                background-color: transparent;
+                
+            }
+            .dropdown-content::-webkit-scrollbar-corner
+            {
+                background-color: transparent;
+            }
+            /* 드롭다운 메뉴 스크롤 스타일 */
+            .show
+            {
+                display: block;
+            }
+            .dropdown-content a
+            {
+                display: block;
+            }
+            #NaviBar
+            {
+                position: absoulte;
+                font-size: 0.85em;
+                margin-top: 1.18%;
+            }
+            #LeftNav > li > a:hover
+            {
+                color: #bdc1c6;
+                text-decoration: underline;
+                background-repeat: no-repeat;
+            }
+            #LeftNav > li > a:not(:hover)
+            {
+                color: #bdc1c6;
+                text-decoration: none;
+                background-repeat: no-repeat;
+            }
+            #RightNav > li > a:hover
+            {
+                color: #ffffff;
+                text-decoration: underline;
+                background-repeat: no-repeat;
+            }
+            #RightNav > li > a:not(:hover)
+            {
+                color: #ffffff;
+                text-decoration: none;
+                background-repeat: no-repeat;
+            }
+            #nav00
+            {
+                position: absolute;
+                left: 1.25%; 
+                text-decoration: none;
+            }
+            #RightNav > li > a
+            {
+                font-size: 0.95em;
+                top: 1.5%;
+            }
+            #nav01
+            {
+                position: absolute;
+                left: 6.25%;
+            }
+            #nav02
+            {
+                position: absolute;
+                right: 9%; 
+                text-decoration: none;
+            }
+            #nav03
+            {
+                position: absolute;
+                right: 6.3%; 
+                text-decoration: none;
+            }
+            
+            #SearchBar:hover, #SearchTField:hover
+            {
+                background-color: #313134;
+            }
+            #SearchBar:hover
+            {
+                background-color: #313134;
+                box-shadow: 0px 0px 1.5px 5px #1f2023;
+                border-color: transparent;
+            }
+            /* CSS && Logical Operater */
+            #SearchBar:hover 
+            #SearchTField:not(:hover)
+            {
+                background-color: #313134;
+            }
+            #dropdown-etc:hover
+            {
+                background-color: #3c4043;
+            }
+            .dropdown-content > .column > a:hover
+            {
+                background-color: #28292c;
+                border-radius: 10%;
+            }
+            #menuicon 
+             {
+                position: absolute;
+                height: 30px;
+                width: 30px;
+                left: 4px;
+                top: 4px;
+                -webkit-user-drag: none;
+                -webkit-user-select: none;
+                user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+             }
+            .dropbtn
+            {
+                position: absolute;
+                right: 65px;
+                top: 13px;
+                background-color: #202124;
+                border: none;
+                border-radius: 30px;
+                cursor: pointer;  
+                height: 40px;
+                width: 40px; 
+            }
+            #SearchBar
+            {
+                position: absolute;
+                left: 34.8%;
+                right: 75%;
+                top: 40.5%;
+                background-color: #202124;
+                width: 583px;
+                height: 46px;
+                border: 1.99px;
+                border-style: double;
+                border-color: #5f6368;
+                border-radius: 25px;
+            }
+            #SearchTField
+            {
+                position: absolute;
+                left: 44px;
+                top: 0.5px;
+                background-color: #202124;
+                width: 532px;
+                height: 39.5px;
+                border: none;
+                border-style: none;
+                border-color: #5f6368;
+                border-radius: 25px;
+                caret-color: white;
+                color:white;
+                font-size: medium;
+            }
+            #searchBtn
+            {
+                font-size: 0.87em;
+                color: #babbd0;
+                position:absolute;
+                left: 43.2%;
+                right: 75%;
+                top: 48.5%;
+                widtH: 110px;
+                height: 35.5px;
+                border-radius: 5px;
+                background-color: #303134;
+                color: white;
+                cursor: pointer;
+            }
+            #searchBtn:not(:hover)
+            {
+                border-style: none;
+            }
+            #searchBtn:hover
+            {
+                border-style: double;
+                border-width: 0.01em;
+                border-color: #5f6368;
+            }
+            #LuckyBtn
+            {
+                font-size: 0.87em;
+                color: #babbd0;
+                position:absolute;
+                left: 49.5%;
+                right: 75%;
+                top: 48.5%;
+                widtH: 145px;
+                height: 35.5px;
+                border-radius: 5px;
+                background-color: #303134;
+                color: white;
+                cursor: pointer;
+            }
+            #LuckyBtn:not(:hover)
+            {
+                border-style: none;
+            }
+            #LuckyBtn:hover
+            {
+                border-style: double;
+                border-width: 0.01em;
+                border-color: #5f6368;
+            }
+            
+            /* input:focus */
+            /* Eliminate the style of search bar when you click on it.*/
+            #SearchBar:focus, #SearchTField:focus
+            {
+                outline: none;
+            }
+            #SearchIcon
+            {
+                position: absolute;
+                height: 29.1px;
+                width: 29px;
+                top: 6.5px;
+                left: 7.5px;
+                right: 75%;
+            }
+            .dropdown-content > div > a
+            {
+                color: white;
+                font-size: small;
+                text-decoration: none;
+            }
+            #dropdown-etc
+            {
+                font-size: 0.9em;
+                color: #7eb4e5;
+                text-decoration: none;
+                text-align: center;
+                border: 0.05px solid #5f6368;
+                white-space: nowrap;
+                position: relative;
+                line-height: 2.25em;
+                width: 65%;
+                border-radius: 4%;
+                margin-left: 18%;
+                margin-right: 25%;
+                margin-top: 13%;
+            }
+            #CatBtn
+            {
+                position: absolute;
+                height: 150px;
+                width: 150px;
+                background-color: transparent;
+                border: none;
+                border-style: none;
+                cursor: pointer;
+                bottom: 80px;
+            }
+            #ClickMeText
+            {
+                position: absolute;
+                bottom: 80px;
+                left: 115px;
+                height: 35px;
+                width: 90px;
+                -webkit-user-drag: none;
+                -webkit-user-select: none;
+                user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+            }
+            #ClickMeIMG
+            {
+                height: 150px;
+                width: 150px;
+                bottom: 90px;
+                -webkit-user-drag: none;
+                -webkit-user-select: none;
+                user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+            }
+            #ToggleCat
+            {
+                position: absolute;
+                right: 10px;
+                bottom: 80px;
+                -webkit-user-drag: none;
+                -webkit-user-select: none;
+                user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+            }
+            #LoadingCat
+            {
+                position: absolute;
+            }
+            #PageLogo
+            {
+               position: absolute;
+               left: -2px;
+               right: 75%;
+               top: -2px;
+               height: 219px;
+               width: 389px;
+               -webkit-user-drag: none;
+               -webkit-user-select: none;
+               user-select: none;
+               -moz-user-select: none;
+               -ms-user-select: none;
+            }
+            #LogoBtn
+            {
+                position: absolute;
+                left: 39.8%;
+                right: 75%;
+                top: 14%;
+                height: 219px;
+                width: 389px;
+                cursor: pointer; 
+            }
+            #LogoIframe
+            {
+                position: absolute;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                background: #000;
+                border: none;
+                height: 541px;
+                width: 956px;
+                overflow: hidden;
+                top: 20%;
+                left: 25%;
+                animation-delay: 5s;
+            }
+            .LightBox
+            {
+                position: fixed;
+                overflow: auto;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: rgba(0,0,0,0.78); /* 4번째 자리가 투명도 */
+                animation-delay: 5s;
+            }
+            #CloseBtn /* 버튼 이미지 */
+            {
+                height: 23.5px;
+                width: 23.5px;
+                -webkit-user-drag: none;
+                -webkit-user-select: none;
+                user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+            }
+            #CloseVid /* HTML 버튼 */
+            {
+                position: absolute;
+                background-color: black;
+                opacity: 0.8;
+                border: none;
+                border-style: none;
+                border-radius: 50%;
+                cursor: pointer;
+                height: 50px;
+                width: 50px;
+                top: 11.3px;
+                right: 7px;
+            }
+            .FOOTER
+            {
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                height: 48px;
+                width: 2000px;
+                background-color: #171717;
+            }
+            .FooterText
+            {
+                position: absolute;
+                bottom: 15px;
+                white-space: nowrap;
+                font-size: 0.88em;
+                color: #999DA2;
+                text-decoration: none;    
+            }
+            #Footer01
+            {
+                left: 35px;   
+                letter-spacing: -0.6px;
+            }
+            #GoogleText
+            {
+                background-color: transparent;
+                color: #999DA2;
+                font-size: 1em;
+            }
+            #Footer02
+            {
+                left: 142px;
+            }
+            #Footer03
+            {
+                left: 201px;
+            }
+            #Footer04
+            {
+                left: 286px;
+            }
+            #Footer05
+            {
+                left: 1700px;
+            }
+            #Footer06
+            {
+                left: 1856.5px;
+            }
+            .GoogleFooterHref
+            {
+                background-repeat: no-repeat;
+                text-decoration: none;
+                color: #999DA2;
+            }
+            .GoogleFooterHref:hover
+            {
+                text-decoration: underline;
+                color: #999DA2;
+            }
+            #GoogleSteelpan_Buttons
+            {
+                position: absolute;
+                cursor: pointer;
+            }
+            #GoogleSteelpan_Share_Button, #GoogleSteelpan_Share_Button > img 
+            {
+                position: absolute;
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+                height: 60px;
+                width: 60px;
+                top: 115px;
+                left: 716px;
+            }
+            #GoogleSteelpanSearch > img
+            {
+                position: absolute;
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+                height: 60px;
+                width: 60px;
+                top: 150px;
+                left: 1430px;
+            }
+            #GoogleSteelpan_Twitter
+            {
+                position: absolute;
+                top: 290px;
+                left: 1438px;
+                height: 60px;
+                width: 60px;
+            }
+            #GoogleSteelpan_Facebook
+            {
+                position: absolute;
+                top: 350px;
+                left: 1438px;
+                height: 60px;
+                width: 60px;
+            }
+            #GoogleSteelpan_Mailto
+            {
+                position: absolute;
+                top: 410px;
+                left: 1438px;
+                height: 60px;
+                width: 60px;
+            }
+            #GamePlayButton > img
+            {
+                position: absolute;
+                top: 310px;
+                left: 1442px;
+                height: 50px;
+                width: 50px;
+            }
+           
+           
+           
+            
+        
