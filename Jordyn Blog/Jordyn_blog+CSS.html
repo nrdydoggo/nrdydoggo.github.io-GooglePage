@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html lang = "ko">
+
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE-edge">
+        <link rel = "stylesheet" href = "resources/css/Jordyn_Blog.css">
+        <title>:: Blog of Jordyn Lee ::</title>
+        <!-- 웹 상의 html 코드 영역에서는 html 파일의 <style></style> 내부에 
+        CSS 코드를 적는다. <style type="text/css">로 명시해줄 것. -->
+        <style>
+        #MusicTitle
+        {
+           margin-top: 0%; 
+           margin-left: -13%;
+        }
+        #MusicTitle>li>a
+        {
+            margin-bottom: 0%;
+            background-repeat: no-repeat;
+            color: black;
+            list-style: decimal;
+            text-decoration:none;
+            font-weight: bold;
+            font-size: 95%;
+        }
+        #mp3Player
+        {
+            margin-top: 50%;
+            margin-left: -8%;
+            width: 98%;
+        }
+       
+        * {
+
+    box-sizing: border-box;
+
+}
+body 
+{
+    background:rgb(70, 70, 70);
+    height:100%;
+    margin:0;
+}
+/* 전체 페이지 */
+#container 
+{
+    background:rgb(255, 255, 255);
+    position:relative;
+    left:50%;
+    margin-left:-450px;
+    width:900px;
+    height: 900px;
+}
+#main 
+{
+    width:100%;    
+    height:100%;
+    background:#fff;
+}
+aside 
+{
+    float:left;
+    width:270px;    
+    padding:20px 50px;
+    height: 900px;
+    background:#ffedd1;
+}
+li,p 
+{
+    line-height: 2.0;
+    font-size:0.9em;
+}
+.pf 
+{
+    border-radius:10%;
+    box-shadow:3px 3px 10px 2px #222;
+
+} 
+/* Aside information */
+#detail 
+{
+    position: relative;
+    top:80px;
+    margin-top: -80px;
+    margin-left: -25px;
+}
+#sns
+ {
+    position:relative;
+    top:100px;
+ }
+
+#main 
+{
+    float:right;
+    width:600px;
+    padding:20px;
+}
+
+#main > section 
+{
+    width:500px;
+    padding:20px;
+    margin:10px;
+    border-bottom:1px dotted #222;
+}
+
+section > p, section>table 
+{
+    height: 170px;
+    width: 500px; 
+    margin-left: -5%;
+}
+
+/* 글자스타일 */
+aside h1 
+{
+    font-size:1.8em;
+    font-variant: normal;
+}
+aside h2 
+{
+    font-size:1.2em;
+}
+#namecard p 
+{
+    font-size:0.8em;
+    color:rgb(99, 99, 99);
+    margin-top: -15px;
+    /* font-style:italic; */
+}
+#sns-hyper_links
+{
+    margin-top: -5px;
+    margin-left: -23.5px;
+}
+#email
+{
+    margin-top: -10px;
+}
+#tel
+{
+    margin-top: -10px;
+}
+
+/* 추가된 이미지 파일의 경계를 부드럽게 할 수 있다 */
+img
+{
+    border-radius: 15%;
+}
+.subtitle 
+{
+    font-size:1.5em;
+    /* padding-left:45px; */
+    line-height:0.9em;
+    margin-left: 25%;
+    margin-bottom: 5%;
+    margin-top: -2.5%;
+}
+.subtitle::before 
+{
+    content:"";
+    display:block;
+    background:url("") no-repeat;
+    width:24px;
+    height:24px;
+    float:left;
+    margin:0 15px 0 0;
+}
+section > p 
+{
+    font-size:0.9em;
+}
+
+.label 
+{
+    display:inline-block;
+    width:80px;
+    color:purple;
+    font-weight:bold;
+}
+
+meter 
+{
+    width:200px;
+    margin-right:10px;    
+}
+
+
+            a:any-link
+            {
+                color:blue;
+                text-decoration: none;
+            }
+            table
+            {
+                /* 표의 너비 */
+                width:70%;
+                /* 표 테두리 굵기, 색상 */
+                border:1px solid #111111;
+                /* 표와 셀의 테두리 선을 서로 붙게함 */
+                border-collapse: collapse;
+                
+            }
+            thead
+            {
+                background-color: #ffedd1;
+            }
+            th, td
+            {
+                /* 텍스트 정렬 */
+                text-align: center;
+                /* 셀 테두리 굵기 및 색상 */
+                border:1px solid #111111;
+                /* 폰트 크기 */
+                font-size:0.8em;
+            }
+            caption
+            {
+                margin-left: -85%;
+                margin-bottom: 1.5%;
+                font-size:0.88em;
+            }
+         
+        </style>
+        <script src = "https://code.jquery.com/jquery-3.6.0.js"></script>
+    </head>
+    <body>
+        <div id = "container">
+            <!-- HTML <aside> 요소는 문서의 주요 내용과 
+            '간접적으로만' 연관된 부분을 나타냅니다. -->
+            <!-- ---------------------------------------- -->
+            <!-- <div></div> 태그는 Division의 약자로, 레이아웃을 
+                 나누는데 주로 쓰입니다. 주로 CSS 파일과 연동하여 사용됩니다. -->
+            <!-- ---------------------------------------- -->
+            <!-- 사이드바 -->
+        <aside>
+                <!-- 네임카드, 프로필 아이콘 -->
+                <div id = "namecard">
+                    <h1>Jordyn Lee</h1>
+                    <p><strong>DOGGY World</strong></p>
+                <!-- a 태그 안에 들어갈 속성값들: href, target, 
+                     download, rel, hreflang, type -->
+                <!-- <a> 태그의 rel 속성은 현재 문서와 링크된 문서 
+                     사이의 연관 관계(relationship)를 명시합니다. -->
+                     <div id = "profile_icon_DL">
+                        <A href = "https://github.com/knksrp60/Resources/raw/main/profile_icon01.png" target = "blank"
+                     download = "nrdydoggo.gif" rel = "external" hreflang = "en" type = "image/png"> 
+                     <!-- 링크파일의 타입을 명시 -->
+                     <img src = "https://github.com/knksrp60/Resources/raw/main/profile_icon01.png" width = "150px" 
+                     height = "150px" alt = "현재 이미지를 불러올 수 없습니다.">
+                     <!-- a href "tel:" 태그는 전화번호를 클릭 시 자동 연결되는 기능 -->
+                    </A>
+                    </div>
+                </div>
+                <!-- 개인정보 상세 연락처 -->
+                <div id = "detail">
+                    <ul>
+                        <li>
+                            <p>
+                                <A href = "https://cutt.ly/vFKyZJL" target = "_blank">
+                                Suwon-si, Gyunggi-do, Korea, Republic of.
+                                </A>
+                            </p>
+                        </li>   
+                        <div id = "email">
+                        <li>
+                            <A href = "mailto:jordynhtt@gmail.com">
+                            <p>jordynhtt@gmail.com</p>
+                            </A>
+                        </li>
+                        </div>  
+                        <div id = "tel">
+                        <li>
+                            <A href = "tel:+821014474125" style = "font-size: 0.8em;">
+                            TEL: 010-1447-4125
+                            </A>
+                        </li>
+                        </div>
+                    </ul>
+                </div>
+                <!-- 소셜 미디어 정보 -->
+                <div id = "sns">
+                    <h2>My SNS information</h2>
+                    <div id = "sns-hyper_links">
+                    <ul>
+                        <li>
+                            <A href = "https://www.furaffinity.net/user/nrdydoggo"
+                            target = "blank">
+                                 :: furaffinity ::
+                            </A>
+                        </li>
+                        <li>
+                            <A href = "https://www.instagram.com/canid.box_/"
+                            target = "blank">
+                                 :: Instagram ::
+                            </A>
+                        </li>
+                        <li><th><strong>SNS 바로가기</strong></th>
+                            <!-- #1 이미지 삽입 , usemap으로 맵 네임 설정-->
+                            <img src = "https://i.imgur.com/Bo3zeei.png" alt = ""
+                            usemap = "#favorites">
+                            <!-- #2 맵 네임 불러오기, 아래에 링크를 걸어줄 이미지의 영역들을 area로 지정 -->
+                            <map name = "favorites">
+                                <!-- #3 area에 shape로 모양 지정, 링크를 넣어줄 좌표를 4개(x1,y1,x2,y2 좌측상단+우측하단)
+                                넣어준 후 href로 이미지 링크 넣기. 이미지가 없을 때 링크에 들어갈 수 있게 링크의 이름 
+                                alt로 지정 -->
+                                <area shape = "rect" coords = "2,4,46,46" href = "https://twitter.com/"
+                                alt = "트위터로 이동" target = "_blank">
+                                <area shape = "rect" coords = "52,3,100,48" href = "https://www.instagram.com/"
+                                alt = "인스타그램으로 이동" target = "_blank">
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                <!-- audio player -->
+                <div id = "Audio_player">
+                    <audio controls autoplay id = "mp3Player">
+                        당신의 브라우저는 html5 오디오태그를
+                        지원하지 않습니다.
+                    </audio>
+                </div>
+                <ul id = "MusicTitle">
+                <li class = "current-song">
+                    <a href = "https://github.com/knksrp60/Resources/raw/main/Every%20Breath%20You%20Take.mp3"
+                    >Every Breath You Take</a>
+                </li>
+                <li>
+                    <a href = "https://github.com/knksrp60/Resources/raw/main/Everyone%20Is%20Horrid%20Except%20Me%20(And%20Possibly%20You).mp3"
+                    >Everyone Is Horrid Except Me</a>
+                </li>
+                <li>
+                    <a href = "https://github.com/knksrp60/Resources/raw/main/Shippuden.mp3"
+                    >疾風伝</a>
+                </li>
+                <li>
+                    <a href = "https://github.com/knksrp60/Resources/raw/main/DAGOTHWAVE.mp3"
+                    >DAGOTHWAVE</a>
+                </li>
+                </ul>
+<script>
+    mp3Player();
+    var i;
+    function mp3Player()
+        {
+            $("#mp3Player")[0].src = $("#MusicTitle li a")[0];       
+            $("#MusicTitle li a").click(function(e)
+            {
+            // 음악 링크를 클릭했을 때 원본 소스 링크로 이동하는 것을 방지
+            e.preventDefault();
+            // 링크를 클릭하면 해당 곡이 플레이어에서 재생되게함(인덱스 값은 건드리지 말 것)
+            $("#mp3Player")[0].src = this;
+        });
+        }
+</script>
+        </aside>
+        <!-- aside end -->
+        
+        <div id = "main">
+                    <!-- 자기소개 -->
+                    <section>
+                        <h2 class = "subtitle">
+                        Who am I?
+                        </h2>
+                        <p>    
+                            <mark>프론트엔드 웹 기술(Front-end Web Tech.)</mark>에 
+                            관심이 많으며,<br>현재 제주의 한 시골 마을에서 프리랜서 
+                            코더로 근무하고 있습니다.   
+                        </p>
+                    </section>
+                    <!-- 경력 -->
+                    <section>
+                        <li>Javascript 기반 웹 개발 분야
+                            <ul>
+                                <li>경력 사항</li>
+                                <li>경력 사항</li>
+                                <li>경력 사항</li>
+                            </ul>
+                        </li>
+                        <li>HTML, CSS 웹 디자인 분야
+                            <ul>
+                                <li>경력 사항</li>
+                                <li>경력 사항</li>
+                            </ul>
+                        </li>
+                    </section>
+                    <!-- 숙련도 -->
+                    <section>
+                        <h2 class = "subtitle">Education</h2>
+                        <table>
+            <!-- <caption> 태그는 테이블의 캡션 (caption, 테이블이나 사진, 
+                 삽화 등에 붙는 설명)을 정의할 때 사용합니다. -->
+                            <caption><strong>[학력 사항]</strong></caption>
+            <!-- <thead> 태그는 HTML 테이블에서 헤더 콘텐츠(header content)
+                들을 하나의 그룹으로 묶을 때 사용합니다. -->
+            <!-- <tr> 태그는 테이블에서 셀들로 이루어진 하나의 
+                 행(가로)을 정의할 때 사용합니다. (thead, tbody 태그내에서 사용) -->
+            <!-- (1) thead >> (2) tr >> (3) th th 구분 구분 -->
+                                <thead> 
+                                    <tr>
+                                        <th>출신학교</th>
+                                        <th>전공</th>
+                                        <th>기간</th>
+                                        <th>구분</th>
+                                    </tr>
+                                </thead>
+            <!-- <tbody> 태그는 HTML 테이블에서 내용 콘텐츠(body content)
+                들을 하나의 그룹으로 묶을 때 사용합니다. -->
+            <!-- (1) tbody >> (2) tr >> (3) th(td), th(td) => 내용, 내용 -->
+                                <tbody>
+                                    <tr>
+                                        <th>호매실고등학교</th>
+                                        <th>-</th>
+                                        <th>2013.03 ~ 2015.09</th>
+                                        <th>졸업</th>
+                                    </tr>
+                                    <tr>
+                                        <th>명지전문대학</th>
+                                        <th>일본어비즈니스학과</th>
+                                        <th>2017.03~2022.06.15</th>
+                                        <th>졸업</th>
+                                    </tr>
+                                </tbody>
+                        </table>
+                    </section>
+        </div>
+        </div>
+    </body>
+</html>
