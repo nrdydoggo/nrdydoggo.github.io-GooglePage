@@ -1,0 +1,161 @@
+
+/* Player container */
+body
+{
+    background-image: url(
+        "https://github.com/StellaVulpis/Resources/raw/main/MusicPlayer-Body.jpeg");
+    font-family: Nitw P1;
+    font-size: 1.45em;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+::-webkit-scrollbar
+{
+    background-color: transparent;
+    height: 12.5px;  
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: #360023;
+    border-radius: 8px;
+}
+::-webkit-scrollbar-track
+{
+    background-color: #11000B;
+}
+::-webkit-scrollbar-corner
+{
+    background-color: transparent;    
+}
+
+/* Track Art */
+.player-background
+{
+    position: absolute;
+    top: 100px;
+    left: 750px;
+    margin: 30px;
+    height: 600px;
+    width: 400px;
+    background-image: URL('https://github.com/StellaVulpis/Resources/raw/main/MusicPlayer-background.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 2.5%;
+}
+/* Music information */
+.current-music
+{
+    position: absolute;
+    top: 170px;
+    left: 890px;
+    color: white;
+}
+.music-name
+{
+    position: absolute;
+    left: 790px;
+    top: 625px;
+    color: white;
+}
+.artist-name
+{
+    position: absolute;
+    left: 790px;
+    top: 660px;
+    color: white;
+}
+.total-duration,
+.current-time,
+.timeTotime
+{
+    position: absolute;
+    color: white;
+    font-size: 0.8em;
+}
+.current-time
+{
+    top: 571px;
+    left: 831px;
+}
+.timeTotime
+{
+    top: 552px;
+    left: 820px;
+}
+.total-duration
+{
+    top: 571px;
+    left: 785.5px;
+}
+/* Buttons */
+/* Buttons - fa fa */
+.seek-slider[type=range],
+.volume-slider[type=range]
+{
+    position: absolute;
+    height: 10px;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    accent-color: #0a5e91;
+    background: white;
+}
+.seek-slider[type=range]
+{
+    top: 555px;
+    left: 860px;
+    width: 210px;
+}
+#volumeIcon
+{
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 0.6em;
+    color: #0a5e91;
+    top: 555px;
+    left: 1079.5px;
+    width: 75px;
+}
+.volume-slider[type=range]
+{
+    top: 555px;
+    left: 1100px;
+    width: 75px;
+}
+i.fa-play,
+i.fa-light,
+i.fa-step-backward,
+i.fa-step-forward
+{
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    color: #0a5e91;
+    cursor: pointer;
+    position: absolute;
+}
+i.fa-step-backward
+{
+    font-size: 2.5em;
+    top: 490px;
+    left: 866px;
+}
+i.fa-play
+{
+    font-size: 3em;
+    top: 485px;
+    left: 940px;
+}
+i.fa-step-forward
+{   
+    font-size: 2.5em;
+    top: 492px;
+    left: 1030px;
+}
+
+/* To change size of fa icon, use font-size */
+
+
+/* Music player seek slider */
+/* Music player volume slider */
