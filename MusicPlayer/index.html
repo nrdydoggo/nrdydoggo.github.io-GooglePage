@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+        <link rel="stylesheet" href="src/css/AudioPlayer.css">
+        <title>Music Player with Playlist</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="src/js/AudioPlayer.js"></script>
+        <!-- Importing fa fa icons -->
+        <script src="https://kit.fontawesome.com/39a9539f0f.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+      <div class="player">
+        <!-- Music information -->
+        <div class="detail">
+          <div class="player-background"></div>
+          <div class="current-music">Playing x of y in the list</div>
+          <div class="album-cover"></div>
+          <div class="music-name">Now Playing: </div>
+          <div class="artist-name">Artist: </div>
+        </div>
+        <!-- Buttons -->
+        <div class="buttons">
+          <div class="prev" onclick="ToPrev()">
+            <i class="fa fa-step-backward fa-5x"></i> <!-- fa fa- >> importable icons -->
+          </div>
+          <div class="Play-Pause" onclick="PlayPause()">
+            <i class="fa-solid fa-play fa-5x"></i>
+          </div>
+          <div class="next" onclick="ToNext()">
+            <i class="fa fa-step-forward fa-5x"></i>
+          </div>
+        </div>
+        <!-- Music player seek slider -->
+        <div class="seek_slider-container">
+          <div class="current-time">00:00</div>
+          <input type="range" min="0" max="100"
+          value="0" class="seek-slider" onchange="SeekTo()">
+          <p class = "timeTotime">/</p>
+          <div class="total-duration">00:00</div>
+        </div>
+        <!-- Music player volume slider -->
+        <div class="volume_slider-container">
+          <i class= "fa fa-volume-up" onclick = "MuteVolume()" id = "volumeIcon"></i>
+          <input class="volume-slider" type = "range" min="0" max="100"
+          value="100" onchange="SetVolume()"> 
+        </div>
+      </div>
+      <script src="src/js/AudioPlayer.js"></script>
+    </body>
+</html>
