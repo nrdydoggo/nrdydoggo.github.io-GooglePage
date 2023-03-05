@@ -1,0 +1,215 @@
+a:any-link
+{
+    -webkit-user-drag:none;
+    -webkit-user-select:none;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    text-decoration: none;
+    /* Custom Cursor */
+    cursor: url("https://github.com/StellaVulpis/Resources/raw/main/Mae-Cur.png"), 
+    url("https://github.com/StellaVulpis/Resources/raw/main/Mae-Cur.cur"), default;
+} 
+body
+{
+    background-image: url(
+        "https://github.com/StellaVulpis/Resources/raw/main/PageRedir.png");
+    background-size: 1920px;
+    font-family: Nitw P1;
+    font-size: 0.725em;
+    color: white;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+img,
+img:any-link
+{
+    -webkit-user-drag:none;
+    -webkit-user-select:none;
+}
+h2,
+h4
+{
+    font-weight: normal;
+}
+h1
+{
+    font-weight: bold;
+    font-size: 5.5em;
+    position: fixed;
+    margin-left: 39%;
+}
+h2
+{
+    font-size: 4.7em;
+    position: fixed;
+    margin-left: 42.5%;
+    top: 140px;
+}
+h4
+{
+    font-size: 3.5em;
+    position: fixed;
+    margin-left: 15%;
+    top: 190px;
+}
+::-webkit-scrollbar
+{
+    background-color: transparent;
+    height: 6.25px;  
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: #360023;
+    border-radius: 8px;
+}
+::-webkit-scrollbar-track
+{
+    background-color: #11000B;
+}
+::-webkit-scrollbar-corner
+{
+    background-color: transparent;    
+}
+.copyright_section
+{
+    position: fixed;
+    font-size: 2em;
+    bottom: 10px;
+    right: 45px;
+    color: rgb(158, 158, 158);
+}
+.copyright_section > a
+{
+    color: #c63a18;
+}
+.IFLogo
+{
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    bottom: -2.5px;
+    right: 2.5px;
+}
+.pageLink
+{
+    font-size: 3em;
+    position: fixed;
+    margin-left: 15%;
+    top: 625px;
+}
+#n1, n2, n3, n4, n5
+{
+    position: absolute;
+}
+#n1
+{
+    margin-left: 10%; 
+}
+#n2
+{
+    margin-left: 30%;
+}
+#n3
+{
+    margin-left: 50%;
+}
+#n4
+{
+    margin-left: 70%;
+}
+#n5
+{
+    margin-left: 90%;
+}
+.pageLink > a > img
+{
+    font-size: 3em;
+    position: fixed;
+    margin-left: 15%;
+    top: 425px;
+    height: 180px;
+    width: 180px;
+    border-radius: 6.5%;
+}
+.pageLink > a
+{
+    color: white;
+}
+.pageLink > a:hover
+{
+    color: #00fef9;
+}
+/* Choose another element to modify when the tag is hovered. */
+/* Must id(#Name) instead of class(.Name) */
+#n1:hover #text01
+{
+    color: #00fef9;
+}
+#n2:hover #text02
+{
+    color: #00fef9;
+}
+#n3:hover #text03
+{
+    color: #00fef9;
+}
+#n4:hover #text04
+{
+    color: #00fef9;
+}
+#n5:hover #text05
+{
+    color: #00fef9;
+}
+/* Usage: 
+    A:hover > B {}: Use when it is directly inside the container. 
+    A:hover + B {}: Use when it is next to the container.
+    A:hover B {}: Use when it is somewhere in the container. 
+    A:hover ~ B {}: Use when it is a sibling of the container.
+*/
+#img01
+{
+    left: -120px;
+}
+#img02
+{
+    left: 200px;
+}
+#img03
+{
+    left: 530px;
+}
+#img04
+{
+    left: 900px;
+}
+#img05
+{
+    left: 1230px;
+}
+.FooterAnime
+{
+    background-color: transparent;
+    border-color: transparent;
+}
+#GregShaking,
+#GregAngusShaking
+{
+    position: fixed;
+    height: 125px;
+    width: auto;
+    -webkit-user-drag:none;
+    -webkit-user-select:none;
+    cursor: url("https://github.com/StellaVulpis/Resources/raw/main/Mae-Cur.png"), 
+    url("https://github.com/StellaVulpis/Resources/raw/main/Mae-Cur.cur"), default;
+}
+#GregShaking
+{
+    bottom: 25px;
+    margin-left: 15px;
+}
+#GregAngusShaking
+{
+    bottom: 29px;
+    margin-left: 17px;
+}
