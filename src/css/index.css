@@ -97,25 +97,29 @@ h4
     margin-left: 15%;
     top: 625px;
 }
+#n1, n2, n3, n4, n5
+{
+    position: absolute;
+}
 #n1
 {
-    left: -150px;
+    margin-left: 10%; 
 }
 #n2
 {
-    left: 235px;
+    margin-left: 30%;
 }
 #n3
 {
-    left: 425px;
+    margin-left: 50%;
 }
 #n4
 {
-    left: 900px;
+    margin-left: 70%;
 }
 #n5
 {
-    left: 1230px;
+    margin-left: 90%;
 }
 .pageLink > a > img
 {
